@@ -1,0 +1,146 @@
+Date:11/12/2024
+.........................
+Task:
+1. How to create multiple sub dir's within a parent dir?
+2. Explore the commands with atleast 2 flags with the help of --help or using man
+...................................................
+How to create a dir?
+
+Mkdir: mkdir is used to create the dir in the linux environment
+
+syntax: mkdir <dir_name>
+
+Ex:mkdir batch10
+
+...............................
+
+How to create a multiple dir?
+
+syntax: mkdir <dir1> <dir2> <dir3>
+
+How to create a dir within a dir?
+
+syntax: mkdir dir1/dir5
+
+Above command will create a dr <dir5> inside a dir1
+
+Here dir1 is parent dir and dir 7 is child dir
+................................
+
+If we dont have the parent dir and if we want to create the subdir inside a parent dir
+then we should -p option
+
+Syntax:mkdir -p <parent-dir>/<child-dir>
+
+ex: mkdir -p rk1/rk2
+...................................
+
+How to delete a dir?
+
+synatx:rmdir <dir_name>
+
+ex: rmdir d2
+
+Above command will delete the dir d2
+.....................................
+How to delete a dir and its content recursively
+
+syntax: rm -r <parent-dir-name>
+
+Ex: rm -r D1
+
+Above command will delete d1 and all its contents.
+
+....................................................
+
+How to create a file in linux?
+
+Synatx: touch <file_name>
+
+ex: touch abc.txt
+
+This command will create a file abc.txt
+
+..............................
+How to create a mile files?
+
+synatx: touch <file1> <file2> <file3>
+
+ex: touch rk1.txt rk2,txt
+
+...........................
+
+How to delete a file?
+
+rm command is used to delete a file
+
+Synatx: rm <file_name>
+
+ex: rm abc.txt
+
+......................................
+How to delete a multiple files?
+
+syntax: rm <file1> <file2>
+
+ex: rm rk1.txt rk2.txt
+
+................................
+If you want to check the description of any command and with its flags
+
+<command> --help
+
+ex: rm --help
+
+Ex: rm -i abc.txt
+It will ask the conformation before deleting the file abc.txt
+
+..................................
+Man command:
+
+Man command is used to display the manual page of given command
+
+Synatx: man <command_name>
+
+Ex: man mkdir
+
+Note: Both man and --help provides information about the command.
+      Man will provide more detailed information where as --help 
+      provides basic information of a command
+
+...................................................
+
+History:
+
+This command is used to display all the commands which are executed previously
+
+Syntax:history
+............................
+
+How to clear the content of terminal:
+
+synatx: clear
+
+........................................................
+Cd: change directory:
+
+It is used to navigate to the given dir
+
+Sytax: cd <dir-name>
+
+ex: cd dir1
+
+To come back to previous dir:
+
+Syntax: cd ..
+It will navigate to previous dir
+
+If i want to go 2 dir's back from the current dir:
+
+Syntax: cd ../..
+
+.................
+note: ls (list)
+It is used to list information about files and dir's in the present working dir
+..............................
+
