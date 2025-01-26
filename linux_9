@@ -1,0 +1,148 @@
+23/12/2024
+.....................
+https://devopsjune2022-my.sharepoint.com/:v:/g/personal/adikarthik_devopsjune2022_onmicrosoft_com/EVQemQy70mBGol_pGu_2tEABfkMLW4EXWFLfR0U1aqL_rw?e=Hutzey
+.................................................................................................
+task:
+1.Diffrence between chmod and chown
+2.How do you list all users on a system
+3.How do you change the ownership of a file?
+   hint:chown <owner>:<group> <filename>
+4.How to you check the permissions of a file
+5.How can you recover a user’s password if they’ve forgotten it, assuming you have root access?
+
+...................................
+configuration management commands (administrative commands)
+
+How to create a user?
+
+Synatx: sudo adduser <username>
+
+How to check a user is created or not?
+
+cat /etc/passwd
+
+.......................
+
+how to switch to a root user?
+
+sudo su
+
+how to come out from root user?
+
+exit
+
+........................
+
+how to switch to a particular user?
+
+sudo su <user-name>
+
+ex: sudo su anup
+
+how to come out ?
+
+exit
+
+........................
+
+how to change the password of a user?
+
+sudo passwd <username>
+
+ex: sudo passwd anup
+
+.......................
+
+how to create a group?
+
+sudo addgroup <groupname>
+
+ex:sudo addgroup dev
+
+how to check a group is created or not?
+
+cat /etc/group
+
+.......................
+
+how to add a user to a group?
+
+sudo usermod -G <groupname> <username>
+
+ex: sudo usernod -G dev anup
+
+how to check?
+
+cat /etc/group
+
+......................
+
+How to delete a user?
+
+sudo deluser <username>
+
+ex: sudo deluser anup
+
+.........................
+
+How to delete a group?
+
+sudo delgroup <groupname>
+
+ex: sudo delgroup dev
+
+.........................
+
+permissions:
+
+files/dir's/link
+
+d= dir
+-= file
+l= link
+
+Permission types?
+
+1. user permission?
+2. group permission
+3. other permission
+
+
+user:who is the owner file/dir
+group: providing permission to a group and all user under that group will have the permission of group
+other: any user who is neither the owner of the file or a member of the group
+
+
+dir/file/link <user perm> <group perm> <others per>
+
+d              r w x        r w x       r w x
+               4 2 1        4 2 1       4 2 1
+.....................................................
+564            1 0 1        1 1 0       1 0 0
+777            1 1 1        1 1 1       1 1 1
+420            1 0 0        0 1 0       0 0 0
+
+r-read
+w=write
+x=execute
+
+..........................
+
+chmod: chmod is used to change the permission of dir/file/link..
+
+syntax: sudo chmod (vaule) <file/dir/link>
+
+ex: sudo chmod 777 abc.txt
+
+sudo chmod 744 abc.txt
+
+user=u
+group=g
+others:o
+
+sudo chmod g+w abc.txt
+
+sudo chmod 0-r abc.txt
+
+...................................
+

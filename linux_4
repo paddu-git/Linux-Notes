@@ -1,0 +1,107 @@
+Date:14/12/2024
+.......................
+https://devopsjune2022-my.sharepoint.com/:v:/g/personal/adikarthik_devopsjune2022_onmicrosoft_com/EfpYkMUv2r1FicD3N_MZ19QBv0E8eFELaij9HjNQ5ubn7Q?e=C9fhPv
+................................................................
+Task:
+How to search a case insentive pattern in a opened file
+How to search an exact pattern
+How to search and replace the pattern only in 4th line and 10th line?
+
+....................................
+How to search a pattern from first position in opened file
+
+syntax: esc/pattern
+
+Note:After esc/pattern press enter and then esc n
+     and then simply click on n to search pattern
+     
+.................
+How to search a pattern in a backward direction
+
+syntax: esc ? pattern
+
+Note:after that press esc n
+
+......................
+
+How to search and replace 1st matching string in a poine pointing by a cursor
+
+esc:s/Search_pattern/return_pattern
+
+note:s= search
+
+...............
+
+How to search and replace all the strings in a poine pointing by a cursor
+
+esc:s/Search_pattern/return_pattern/g
+
+note:s= search
+     g= globally
+
+...............
+
+How to search and replace the patten only on nth line
+
+syntax:ns/Search_pattern/return_pattern
+
+ex:
+
+How to search and replace the patten only on 5th line
+
+syntax:5s/Search_pattern/return_pattern
+
+..............................
+
+How to search and replace the pattern from 4th line to 10th line all the occurances
+
+esc:4,10s/search-pattern/return-pattren/g
+
+.........................
+
+How to search and replace the pattern from 4th line to last all the occurances
+
+esc:4,$s/search-pattern/return-pattren/g
+
+$= last line
+
+.......................
+
+CAT command
+
+..............
+How to dispaly the content of  a file on the terminal
+
+Syntax: cat <file-name>
+
+..........................
+How to dispaly the content of  a file on the terminal along with line numbers
+
+Syntax: cat -n <file-name>
+..........................
+
+How to dispaly the content of  a file on the terminal along with line numbers where the content is present
+
+Syntax: cat -b <file-name>
+
+............................
+
+How to display the content of a file on the terminal by supressing the repeated empty lines
+
+Sntax: cat -s <file-name>
+
+......................
+
+How to display the content of a file on the terminal along with line no's  by supressing the repeated empty lines 
+
+Sntax: cat -s -n <file-name>
+
+.................
+
+How to combine(concatenate) two files and display the output on terminal
+
+cat <file1.txt> <file2.txt>
+
+...........................................
+
+

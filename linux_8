@@ -1,0 +1,128 @@
+Date:21/12/2024
+......................
+https://devopsjune2022-my.sharepoint.com/:v:/g/personal/adikarthik_devopsjune2022_onmicrosoft_com/ES08taQU8HtMvvtSfxp-97QBOT-2sXof2YlwjDnWQkgZ4Q?e=h2y46D
+.................................................................................................
+task:
+
+How to display the last column of each line of file on the terminal using awk
+command to display the line number followed by second and fifth column of a file using awk
+How to display the line numbers where the content is not present (empty lines) using awk
+what is the difference bewteen hard link and soft link
+
+............................
+
+Links in linux:
+
+A link is a reference to a file (Link is a pointer to file)
+
+Types:
+1)Hard link
+2)soft link
+
+.........................
+
+Hard link:
+
+hard link is an additional name for an existing file.Both the original file and the hard link
+will share share the same inode,which means they are same files,with diff names.
+
+inode(index node):It is a data structure that stores the information about the files/dir.
+                  This information includes metadata such as size,owner,permission etc
+                  
+Syntax: ln <filename> <linkname>
+
+Note:
+1)Wheneverwe make some changes to original file,we can see same changes in the link
+2)When we rename/mv the orinal file,link will work
+3)If we delete the orginal file,link will work
+
+Soft link (symbolic link)
+
+A soft is a pointer a file.It does not share same inode as the orinal file
+
+Syntax: ln  -s <filename> <linkname>
+
+Note:
+1)Whenever make some changes to original file,we can see same changes in the link
+2)When we rename/mv the orinal file,link will not work
+3)If we delete the orginal file,link will not work
+
+..................................
+
+AWk command:
+
+awk command is used to extract the data from the stuctured file
+or
+awk command is used to extract the data columnwise
+
+Syntax: awk '{print}' <filename>
+
+..................................
+How to display 2nd column on a terminal
+
+awk '{print $2}' <filename>
+
+........................
+How to display 2nd  and 4th column on a terminal
+
+awk '{print $2,$4}' <filename>
+
+..........................
+
+awk '{print NF, $1}' <file-name>
+
+Above command will display the number of fields/columns/word (NF) along with coulumn1 content
+
+........................................
+awk '{print NF, $2}' <file-name>
+
+Above command will display the number of fields/columns/word (NF) along with coulumn2 content
+
+......................................
+
+awk '{print NF, $0}' <file-name>
+
+Above command will display the number of fields/columns/word (NF) along with all the content
+
+..............................
+
+NR=no of rows
+........................
+
+awk '{print NR, $1}' <file-name>
+
+Above command will display the line number followed by first word of that line
+
+...................
+
+awk '{print NR, $2}' <file-name>
+
+Above command will display the line number followed by second word of that line
+
+...................
+
+awk '{print NR, $0}' <file-name>
+
+Above command will display the line number followed by all the content of the file
+
+...................
+
+How to print only the line numbers where the content is present using awk
+
+awk 'NF>0 {print NR}' <filename>
+
+.................................
+
+How to print only the first column content  by skipping empty files using awk
+
+awk 'NF>0 {print $1}' <filename>
+
+...........................
+
+How to display total number of lines using awk
+
+awk 'END {print NR}' class8.txt 
+
+........................................
+
+

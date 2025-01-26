@@ -1,0 +1,129 @@
+Date:13/12/2024
+...........................
+https://devopsjune2022-my.sharepoint.com/:v:/g/personal/adikarthik_devopsjune2022_onmicrosoft_com/ETLY13JUaSpFkjCG93pJzXoBvYQPN9qMyIK0gy1LMgEs3A?e=E63otY
+
+task:
+
+Explore on free command and free -h command
+
+..............................
+CP (Copy) command:
+
+Cp command is used to copy a file and dir from one location to another location.
+
+1)How to copy a file/dir?
+
+Syntax: cp <file_name> <destination_path>
+
+2) How to copy a dir and its content from one location to another location?
+
+cp -r <source_path> <dest_path>
+
+note:If the destination path dosen't exist then it will give an error
+
+....................................
+
+Types of commands:
+
+1)Internal commands
+2)External commands
+
+Internal command:
+
+  Command which are built in linux os. Ex: mkdir mv,cp pwd..
+  
+External command:
+
+  Commands which should be installed/added to linux environment.
+  Ex: tree..
+
+sudo apt-get install <command>
+
+sudo: super user do/root user, where it allows to have all the permissions/previlages
+
+...........................................
+
+vi/vim(vi modified) editor
+
+Vi text editor:
+
+How to create a file in vi editor?
+
+Synatx: vi <file_name>
+
+Note:
+
+1.If the file name already exist then it will open the file.
+2. If the file dosent exist then it will create a file and open it.
+3. There is no restriction for extention.
+
+.............................
+
+Vi editor modes:
+
+1)command mode: By default, when you open the file,it will be in the command mode.
+2)Insert mode: It will allow you to add/type the content to a file
+
+How to switch from command mode to insert mode?
+
+esc i (insert)
+
+....................
+How to save the content to afile?
+
+esc: w
+ note: w=write (save)
+
+How to save the content to afile and come of it (exit) ?
+
+esc: wq
+
+note: w (write/save) q(quit)
+
+How to come out of vi editor without saving the content?
+esc:q!
+
+..........................
+
+How to move to end of the line where the cursor is pointing?
+
+esc--shift---a  or (esc A)
+
+....................
+How to move to the last line of a line
+
+esc--shift---g  or  (esc G)
+
+How to move to first line of a file?
+
+esc 1G  (esc--1--shift--g)
+
+How to move to fifth line of a file?
+
+esc 5G  (esc--5--shift--g)
+
+..........................
+
+How to set the line numbers in vi editor?
+
+esc:set nu (number) and then press enter
+
+How to delete the line numbers in vi editor?
+
+esc:set nonu (no number) and then press enter
+
+..............................
+How to delete the line where the cursor is pointing?
+
+esc dd
+
+How to delete the n lines from where the cursor is pointing?
+
+Syntax:esc ndd
+
+Ex:How to delete the 4 lines from where the cursor is pointing?
+
+esc 4dd
+
+.........................................
+

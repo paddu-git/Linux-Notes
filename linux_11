@@ -1,0 +1,154 @@
+Date:26/12/2024
+.............................
+https://devopsjune2022-my.sharepoint.com/:v:/g/personal/adikarthik_devopsjune2022_onmicrosoft_com/EeVHEmbX0G5ElrBSm4Bn7ksBKpU4X96wb5ovU-pJ7vfSTw?e=MOBNfl
+.............................................................................................
+Task:
+1.Command to find all the empty and non empty files/dir's/links in a pwd/specific-path
+2.Find the files/dir's based on some size and delete it.
+3.Find all the files with .txt and change the permissions to 777
+4.Command to display all the dir's with max depth2 (immediate 2 subdirectories)
+  hint: find . -maxdepth 2  -type d
+  Note:If there are n number of subdir's then above command will display only till 2 dir's
+..........................................
+Find command:
+
+Find command is used to search files/dir'/links in a specific path
+
+......................
+find <path> -type f
+It will find all the empty and non empty files in the path specified in the command
+....................................
+find . -type f
+It will find all the empty and non empty files in pwd
+..............................
+
+find . -type d
+It will find all the empty and non empty dir's in pwd
+..............................
+find . -type l
+It will find all the links in pwd
+..............................
+find . -empty
+It will display all the empty files/dir's/links in pwd
+
+.....................
+find . -empty -type f
+It will display all the empty files in pwd
+.....................
+find . -empty -type d
+It will display all the empty dir's in pwd
+.....................
+find . ! -empty
+It will display all the non-empty files/dir's/links in pwd
+.....................
+find . ! -empty -type f
+It will display all the  files non-empty files in pwd
+.....................
+find . ! -empty -type d
+It will display all the non-empty dir's in pwd
+.....................
+find . -name '*.txt'
+Above command find all the content of pwd which is ending with .txt
+....................
+find . -type f -name '*.txt'
+Above command will displayh all the files in pwd which are ending with .txt
+.........................
+find . -type d -size +4096c
+Above command will display all the dir's which are greater than 4096 bytes
+.........................
+find . -type d -size -4096c
+Above command will display all the dir's which are less than 4096 bytes
+.........................
+find . -type d -size 4096c
+Above command will display all the dir's which are exactly equal to 4096 bytes
+.........................
+find . -type f -size +2c -size -100c
+Above command will dispaly all the files with the size greater than 2byptes and less than 100 byptes
+...................................
+find . -type d -size -4k
+Above command will display all the dir's which are less than 4kb (1kb is 1024 so 4k is 4096 )
+.........................
+find . -type f -size +1
+This command will find all the files in pwd which are greater than 1 block, where 1 block is 512 bytes.
+..................................
+find . -type f -size +2
+This command will find all the files in pwd which are greater than 2 block (2 * 512 =1024 bytes)
+..................................
+find . -iname '*.TXT'
+Above command will display the which are end with .txt (i =case insensitive)
+.......................
+How to find all the files/dir's/linls having 777 permission
+find . -perm 777
+....................
+-cmin: created min
+-mmin: modified min
+-amin: accessed min
+time=days
+
+Find . -mmin +20
+
+Above command will display all files/dir/links in pwd which are modified 20 min ago
+...................................
+Find . -mmin 20
+
+Above command will display all files/dir/links in pwd which are modified  exactly 20 min 
+...................................
+Find . -mmin 20
+
+Above command will display all files/dir/links in pwd which are modified  exactly 20 min 
+...................................
+find . -mtime -10
+This command will display all file/links/dirs  which are modified within 10 days
+
+note:check for ctime and atime
+..................................
+Network commands:
+
+How to find ip address of a system?
+
+ifconfig
+or 
+hostname -I
+.....................
+ping
+
+ping command is used to check the availability or rechability of a network host or ip address
+
+command:
+
+ping <ip-address>
+...........................
+
+netstat (network statistics)
+
+netstat command is used to display the nework status
+
+syntax: netstat or netstat -a
+
+it will display the active connections to/from the local system
+................
+
+telnet command:
+
+Telnet command is used to establish a connection to a remote host using telnet protocal (tcp/IP)
+............................
+
+scp (secured copy)
+
+scp command is used to securely transfer the files between local and remote server over the network
+
+How to copy the files from local machine to remote server
+
+syntax: scp <source_file_path> <username>@<server-ip>:<server-path>
+
+how to copy the files from remote server to local machine
+
+syntax: scp <username>@<remote_Ip_address>:<server_path> <local_path>
+............................
+rsync (remote sync)
+
+rsync command is used to securely transfer the files between local and remote server over the network
+rsync command is more efficient than scp bcoz rsync command is used for large data transfer or incremental backup
+it transfers only the new file from source to destination
+...........................
+

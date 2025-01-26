@@ -1,0 +1,112 @@
+Date:20/12/2024
+..............................
+https://devopsjune2022-my.sharepoint.com/:v:/g/personal/adikarthik_devopsjune2022_onmicrosoft_com/Ea1XXar-0fpOr-PsFVJ1bRUBsvga77QUidYnCqZuQW3CIg?e=IIZXt0
+................................................................
+task
+
+1.grep command to seach the line ending with some letter
+2.What is the diff between grep and sed command
+
+..................................
+Grep command (global regular expression)
+
+Grep command is used for searching and filtering the text/pattern
+
+Syntax:grep pattern <file-name>/<file-path>
+
+grep pattern <file-name>
+
+Above command will display the lines where the pattern is present
+
+grep -w <pattern> <filename>
+
+Above command will display the lines where there is exact pattern 
+
+grep -0 <pattern> <filename>
+
+Above command will display the  pattern (instaed of full line,it will display only the pattern)
+
+grep -i <pattern> <filename>
+
+Above command will display the case insensitive pattern
+
+grep -v <pattern> <filename>
+
+Above command will display only the lines where the pattern is not present
+
+grep -n <pattern> <filename>
+
+Above command will display the  lines where the pattern is present along with its line number.
+
+grep -c <pattern> <filename>
+
+Above command will display the total no of lines where the pattern is present.
+
+grep -i -n <pattern> <filename>
+
+Above command will display case insensitive pattern along with line no's
+
+.................
+Ex:
+oem@oem-InsydeH2O-EFI-BIOS:~/batch10$ grep -i -n good class7.txt 
+1:good morning
+5:good morning good mrning good
+6:good goodd GOOD GOOD
+8:goodmorning
+10:GOODMORNING
+12:good good GOOD good
+.........................
+
+grep "^g" <file-name>
+
+Above command will display only the lines starting with g
+
+grep -l <pattern> *
+
+Above command will search  and display the name of all the files in pwd where the pattern is present.
+
+grep -R -l <pattern> *
+
+Above command will search and display names of all the files inside subdir's where the pattern is present.
+
+grep "good morning" file-name
+
+Above command will search for a pattern good morning (use "" to search a apttern having spaces)
+
+...................................
+
+wc command (word count)
+
+wc command is used to display the no of words,lines,characters etc
+
+syntax: wc <filename>
+
+Above command will display lines,words,char's and file name
+
+wc -l <filename>
+
+Above command will display the total number of lines
+
+wc -w <filename>
+
+Above command will display the total number of words
+
+wc -m <filename>
+
+Above command will display the total number of char's
+
+wc -c <filename>
+
+Above command will display the total number of bytes
+
+wc -L <filename>
+
+above command will display the no of char's of longest line in a file.
+
+...........................
+
+oem@oem-InsydeH2O-EFI-BIOS:~/batch10$ cat file4.txt 
+hello
+good morning
+oem@oem-InsydeH2O-EFI-BIOS:~/batch10$ wc file4.txt 
+ 2  3 19 file4.txt

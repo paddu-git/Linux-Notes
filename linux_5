@@ -1,0 +1,135 @@
+Date:16/12/2024
+...............................
+https://devopsjune2022-my.sharepoint.com/:v:/g/personal/adikarthik_devopsjune2022_onmicrosoft_com/Eblg2YIVM45Lkiuv6EQLVi0BnS3jOC_64s-uF-aohTy1UA?e=ASarVB
+............................................................
+task:
+
+How to delete all the content of a file in vi editor?
+.........................
+
+More Command:
+More command is used to display the content of the file on the terminal page wise.
+
+Syntax: more <file-name>
+
+Note:
+* press down arrow key to dispaly the next page
+*use q for quit
+
+...............
+
+Less command:
+
+Less command is used to view the content of the file on the terminal,both in fwd and bwd direction.
+
+Syntax: Less <less-name>
+tead
+Note:
+
+*More command is sued to view the file only in fwd direction,where as less command is used to display
+ the content i both fed and bwd direction.
+ 
+*More will display the content page wise once you press down arrow key.where as less command will display
+ line by line when you press down arrow key.
+...................................
+
+Head command:
+
+Head command will dispaly only first 10 lines of a file  on the terminal.
+
+Syntax: head <file-name>
+
+How to display first 5 lines of a file?
+
+head -5 <file_name>
+
+How to display first 15 lines of a file?
+
+head -15 <file_name>
+
+............
+
+Tail command:
+
+Tail command will dispaly last 10 lines of a file on the terminal.
+
+Syntax: tail <file-name>
+
+How to display last 5 lines of a file?
+
+tail -5 <file_name>
+
+How to display last 16 lines of a file?
+
+tail -16  <file_name>
+
+............
+
+Pipe operator (|)
+
+It is used to connect the output of one command to input of another command.
+
+Syntax: command-1 | command-2
+
+Ex: head -7 <file-name> | tail -2
+
+Above command will dispaly 6th and 7th line of a line on terminal.
+
+Ex: head -13 <file-name> | tail -5
+
+Above command will dispaly 9th to 13th line of a line on terminal.
+
+..................
+
+Tee command:
+
+Tee command is used  with pipe operator which reads the input ,copy it and move it to one or 
+more files.
+
+Syntax: command-1 | tee <file-name>
+Ex: cat rk.txt | tee abc.txt
+
+Content of rk.txt will be copied to abc.txt (by replacing the previous content) and also 
+rk.txt content will also displayed on the terminal.
+
+ex:
+
+ls | tee rk.txt
+
+d2
+d3
+dir10
+dir7
+dirrk
+file.txt
+rk.txt
+t1
+u2.txt
+
+.................................
+
+echo command:
+
+Echo command is used to display message ot text to the terminal or to redirect it to a file.
+
+syntax: echo <file-name>
+
+ex: echo "good morning"
+
+Above command will dispaly the content on the terminal
+
+If you want to write the content to a file by overwriring the previous content then:
+
+Syntax: echo <content> > <file_name>
+
+ex: echo "good morning" > rk.txt
+
+If yoy want to write the content to a file without erasing previous content
+
+Syntax: echo <content> >> <file_name>
+
+ex: echo "good morning" >> rk.txt
+
+................................................
+
+

@@ -1,0 +1,950 @@
+A Document on Linux
+
+Overview
+Linux is a free and open-source operating system that is based on the Unix operating system. It was initially created in 1991 by Linus Torvalds and has since been developed and maintained by a large community of developers and contributors around the world.
+Linux is highly customizable and can be modified to fit the specific needs of users and organizations. It is widely used in servers, supercomputers, embedded systems, and mobile devices. It is also popular among developers and programmers, as it provides a wide range of development tools and a robust command-line interface.
+What is Linux ?
+Linux is a Unix-like, open source and community-developed operating system (OS) for computers, servers, mainframes, mobile devices, and embedded devices.
+
+Features of Linux operating System
+•	Open-source: Linux is free and open-source, which means that the source code for the operating system is freely available for anyone to use, modify, and distribute.
+•	Multi-user: Linux is designed to support multiple users, allowing several users to log in and use the same system simultaneously.
+•	Multi-tasking: Linux can run multiple applications and processes simultaneously, allowing users to perform several tasks at the same time.
+•	Command-line interface: Linux provides a powerful command-line interface that allows users to perform a wide range of tasks using text commands.
+•	File system: Linux uses a hierarchical file system that organizes files and directories in a tree-like structure.
+•	Security: Linux is known for its strong security features, including built-in firewalls and access control mechanisms.
+•	Stability: Linux is known for its stability and reliability, making it a popular choice for servers and other mission-critical applications.
+•	Compatibility: Linux is compatible with a wide range of hardware and software, making it a versatile operating system for a wide range of applications.
+
+Kinds of Linux
+
+•	Ubuntu: Ubuntu is one of the most popular Linux distributions and is known for its ease of use and user-friendly interface. It is based on Debian and is designed to be easy to install and configure.
+•	Fedora: Fedora is a community-driven Linux distribution that is known for its cutting-edge features and frequent updates. It is sponsored by Red Hat and is designed to be a platform for developers and system administrators.
+•	Debian: Debian is a stable and reliable Linux distribution that is known for its robust package management system. It is designed for both desktop and server use and is used by many organizations and governments around the world.
+•	CentOS: CentOS is a Linux distribution that is based on Red Hat Enterprise Linux and is designed for server use. It is known for its stability and reliability and is used by many businesses and organizations.
+•	Arch Linux: Arch Linux is a lightweight and customizable Linux distribution that is designed for advanced users. It is known for its rolling release model, which means that updates are released continuously rather than in fixed releases.
+•	Linux Mint: Linux Mint is a user-friendly Linux distribution that is based on Ubuntu and is designed to be easy to use and configure. It is known for its polished interface and wide range of software.
+•	OpenSUSE: OpenSUSE is a community-driven Linux distribution that is known for its stability and ease of use. It is designed for both desktop and server use and is used by many businesses and organizations.
+
+Linux OS File System
+
+The Linux operating system uses a hierarchical file system structure, similar to other Unix-based operating systems. The file system is represented by a single tree structure with a root directory (represented by "/") and branches leading to other directories and files.
+
+Here are some of the key directories in the Linux file system:
+
+•	/bin: Contains essential command-line tools and utilities, such as ls, cp, and mv.
+•	/boot: Contains the files required for booting the operating system.
+•	/dev: Contains device files that represent physical and virtual devices on the system.
+•	/etc: Contains system-wide configuration files and scripts.
+•	/home: Contains the home directories of regular users.
+•	/lib: Contains shared libraries required by system programs.
+•	/media: Contains mount points for removable media, such as USB drives and CD-ROMs.
+•	/opt: Contains optional software packages installed on the system.
+•	/proc: Contains virtual files that provide system information and statistics.
+•	/root: The home directory for the root user.
+•	/sbin: Contains system administration binaries that are generally used only by the system administrator.
+•	/tmp: Contains temporary files created by system and user applications.
+•	/usr: Contains user programs and data, such as games, documentation, and libraries.
+•	/var: Contains variable data, such as system logs and mail spools.
+
+Command
+
+A command in Linux is a program that can be executed from a terminal or command-line interface. It is a text-based interface that allows users to interact with the operating system by typing in commands.
+
+Types of Commands
+
+Basically, there are two types of commands in Linux.
+
+•	Internal Command
+•	External Command
+
+•	Internal Command:Internal commands are built into the shell or command interpreter itself and are executed directly by the shell. These commands are loaded into memory when the shell starts up and are available for use without any additional setup.
+Ex:cd,ls,pwd,echo,exit
+
+•	External Command:Commands which are not readily available in Linux Operating System.These commands are typically installed by the operating system or additional software packages.
+Ex:tree,traceroot
+
+
+Installing the new packages in Linux OS
+
+To install the new package in install we fallow the below syntax.
+
+Syntax: sudo apt-get install <package name>
+
+Ex:sudo apt-get install traceroute
+
+sudo - It is a super user or root where it allows to have all the packages.
+apt - it is application package tool.
+
+Basic commands in Linux
+
+•	mkdir: It creates a new directory
+
+Synax: mkdir<dir_name>
+
+Ex:mkdir test
+
+•	We can create multiple directoriesat a time
+
+Syntax: mkdir<dir1><dir2><dir3>
+
+Ex:mkdir test1test2test3 
+
+•	We can create a directory within a directory
+
+Syntax: mkdir<parent_dir>/<child_dir>
+
+Ex:mkdir test1/test1.1
+
+-p :if the parent directory doesn’t exist it is going to create the parent directory and it will create the child directory within it.
+
+Ex:mkdir -p test4/test4.1
+
+•	cd :Change the directory
+
+Syntax: cd <dir_name>
+
+Ex: cd test
+
+
+Some commonly used flags of cd commands are,
+
+	cd /path/to/directory : Changes the current directory to the specified directory.
+	cd ..  : Changes the current directory to the parent directory of the current directory.
+	cd -  : Changes the current directory to the previous directory that was visited.
+	cd ~username: Changes the current directory to the home directory of the specified user.
+	cd -P: Changes the current directory to the physical directory, following symbolic links if necessary.
+	cd -L: Changes the current directory to the logical directory, not following symbolic links.
+
+•	pwd: It is used to display the present working directory
+
+Syntax: pwd
+
+•	rmdir:It is used to delete the directory.
+
+Syntax: rmdir<dir_name>
+
+rmdir<dirname with path>
+
+rmdir -p <parent_dir>/<child_dir>
+
+•	ls:Lists the contents of a directory.
+
+Some of the flags used along with ls command.
+
+	ls -a : Lists all files and directories, including hidden files and directories.
+	ls -l:Displays the contents in long format, which includes file permissions, ownership, size, and modification time.
+	ls -t: Sorts the contents by modification time, with the most recently modified files or directories listed first.
+	ls -r: Displays the contents in reverse order.
+	ls -h: Displays the file sizes in human-readable format.
+	ls -R:Displays the contents recursively, showing all subdirectories and their contents.
+
+•	touch:it is used to create the empty files in the Linux.
+
+Syntax: touch file1
+
+touch file2,file3
+
+touch file.txt,file1.txt,file3.txt
+
+
+
+•	cp: Copies a file from one location to another or source to destination
+
+Syntax: cp<source_file_with_path><dest_path>
+
+Ex:  cp test2/file test3
+
+We  can copy the multiple files at a time.
+
+Syntax: cp<source_file_with_path1><source_file_with_path2><source_file_with_path1><dest_path>
+
+Copy the different directory to the current directory.
+
+Syntax: cp<filename_with_path> .
+
+
+•	Cp -r  : The -r flag with the cp command stands for "recursive" and is used to copy directories and their entire contents, including any subdirectories and files within them.
+
+•	mv: The mv command in Linux is used to move or rename files and directories.
+
+Syntax: mv<filename with path><dest file>
+
+Ex: mv file1 file2
+
+
+•	cat: The cat command is a commonly used command in Linux that is used to display the contents of one or more files to the terminal.
+
+•	Date:The date command in Linux is used to display or set the system date and time.
+
+Syntax: date
+
+date +"%Y-%m-%d": Displays the current date in the format YYYY-MM-DD.
+date +"%H:%M:%S": Displays the current time in the format HH:MM:SS.
+date +"%A, %B %d, %Y": Displays the current date in a long format, e.g. Tuesday, May 04, 2023.
+date -s "2023-05-04 12:30:00": Sets the system date and time to May 4th, 2023 at 12:30:00 PM.
+date -u: Displays the current date and time in Co-ordinated Universal Time (UTC).
+To display the only date we can use date +%d command.
+To display the only time we can use date +%T command.
+To display only the date using the date command in Linux, you can use the -d option along with the format specifier for the date.
+Syntax: date -d "today" +"%Y-%m-%d" or date +%F
+
+•	history:history command is used to display the list of commands that have been executed in the current terminal session.
+
+Syntax: history
+
+•	whoami:The whoami command in Linux is used to display the username of the current user.
+
+System Info commands
+
+•	uname: This command displays information about the system kernel. You can use it with various options to display specific information, such as the kernel name, version, release, and processor type.
+Example: uname -a displays all information about the system kernel.
+
+•	top: This command displays information about the processes currently running on the system, including their resource usage (CPU, memory, etc.). It updates in real-time and can be used to monitor system performance.
+
+Example: top -o %CPU sorts the processes by CPU usage.
+
+•	free: This command displays information about system memory usage, including the total amount of memory, the amount of used and free memory, and the amount of memory used for buffers and cache
+
+Example: free -m displays memory usage in megabytes.
+
+•	df: This command displays information about file system disk space usage, including the total and available disk space for each file system.
+
+Example: df -h displays disk space usage in a human-readable format.
+
+•	uptime: This command displays information about how long the system has been running and the current system load.
+
+Example: uptime displays the system uptime and load averages.
+
+•	lsb_release -a : To display the information about the system. It shows the distributor ID, description, release number, and codename.
+
+•	du: It is used to display the disk utilization in the linux system.
+
+Example: du -h displays the current directories utilisation in human readable format.
+
+
+Vi Editor:
+	The vi editor is used to create ,modify the file along with the “search,replace and delete the lines in the opened file”.
+
+	How to create the file in the vi editor?
+
+To create the file we follow the syntax,  vi  <filename>
+
+  Ex: vi demofile
+
+Operations in the vi editor:  
+
+1.Command  Mode
+2.Insert Mode
+
+1.	Command Mode:  By default, when we open the file with vi editor it will be in thecommand. We can do save,delete,search,replace,force quit operations.
+
+
+2.	Insert Mode: It will allow the editor to add the content in to the file.
+
+
+
+	How to switch from command to the insert mode?
+
+Syntax: esc [then] i
+
+iinsert mode
+
+	How to save the file?
+
+Syntax: esc[then] :w
+
+ wwrite in to the desk
+
+	How to quit/exist/comeout from the vi editor?
+
+Syntax: esc[then] :q
+
+	How to save and quit from the vi editor?
+
+Syntax:  esc[then] :wq
+
+!-->Forcefully quit from the editor
+
+	How to insert the content at the end of the line?
+
+Syntax : esc[shift+a]
+
+ esc A
+
+	How to delete the world?
+
+Syntax :  esc[then] dw
+
+Dwdelete the word from the current cursor.
+
+	How to delete the characters from the vi editor?
+
+Syntax: esc[then] x
+
+	How to delete the entire line from the vi editor?
+
+Syntax: esc[then] dd
+
+Ex: delete the 5 lines from current line
+
+Esc[then] 5dd
+
+	How to copy and paste the lines in the vi editor using the command? 
+
+Syntax: esc[then]yy
+
+Esc p
+
+Set Command: 
+
+	How to set the line numbers in the vi editor?
+Syntax: esc[then] :set nu
+
+	How to unset the line numbers in the vi editor?
+
+Syntax:esc[then] :set nonu
+
+	How to move or navigate or go to the beginning or end of the file?
+
+Syntax: esc[then] 1G
+
+esc[then] 1[shift+g]
+
+	How to move to the end of line?
+
+Syntax: esc[then] G
+
+esc[then] [shift+g]
+
+	How to go for specific line?
+
+Syntax: esc[then] <line number> G
+
+Esc[then] <line number>[shift+g]
+
+Undo and redo esc u and esc r
+
+	How to open the vi editor in the read only mode?
+
+Syntax: vi -R <file.txt>
+
+Ex: vi -R test.txt
+
+
+Search the pattern in vi editor:
+
+In vi editor, the search command is used to find a specific text pattern within the text of the document.
+
+	How to search for given string/input/pram/pattern/value/word in the opened file?
+
+Syntax: esc /<pattern>
+
+Ex: esc / word
+
+esc n next occurrence
+
+	How to search for given string/input/param/value/word in the  opened file in the reversdirection?
+
+Syntax: esc ?pattern
+
+Ex: esc ?word
+
+	How to search and replace/substitute the given string/pattern/word/input in the given open file?
+
+Syntax: esc :%s/<search pattern>/<replace pattern>/g
+
+Ex: esc :%s/test/testdata/g
+
+Esc :s/test/testdata/g
+
+s substitute or replace
+
+gglobally
+
+
+	How to replace for the nth occurrence?
+
+Syntax:  esc :%s/<search pattern>/<replace pattern>/nth occurence
+
+Ex: esc :%s/test/testdata/10
+
+	How to search for case insensitive pattern string/input in the open file?
+
+Syntax: esc :set ic
+
+	How to replace the string from the range 3 to 10?
+
+Syntax: esc:3,10s/data/data1/g
+
+Redirection:
+"redirection" refers to the process of changing the input or output of a command from its default source or destination.
+
+>this is used to save the data which is going to display on the console/screen
+
+If the destination file doesn’t exist then it will create new file,if it exists it will replace/override data.
+
+Append:
+
+>> this is used to add/append the data to the end of file.
+
+Ex: ls -lrt>>filename
+
+Word Count:  WC
+    It is used to display the number of lines,number of words,number of characters and number of bytes in the files.
+
+	How to count the lines ,words and characters in the file?
+
+Syntax: wc<file name>
+
+Ex: wc file.txt
+
+Options:
+
+-l displays only number of lines
+-cdisplays only characters
+-wdisplays only number of words
+
+Ex: 1.wc -l file.txt
+     5 file.txt
+More Command:
+ More command will display the content in pages.
+
+Options:  - <number> :It will display the number of lines.
+
+Ex : more -10 displays only 10 lines of the file
+
+Head Command:
+This command will display the content of the file from top or only the specific number of
+lines 
+
+Synax: head <filename>
+
+Ex: head data.txt
+
+If we didn’t mention the number of lines,by default it will display 10 lines.
+
+Ex: head -20 data.txt
+
+It displays 20 lines of the file from top.
+
+Tail Command:
+This command will display the content of the file from the end of the file or bottom of the file.
+
+Synax: tail <filename>
+
+Ex: head data.txt
+
+Ex: tail -20 data.txt
+
+It displays 20 lines of the file from bottom.
+
+	How to display the specific line in the linux?
+
+Syntax: head -n <line number><filename> | tail -n 1
+
+For ex to display the 10th line
+
+head -n 10 <filename> | tail -n 1
+
+	How to get the longest lin the file?
+
+Syntax: wc -L file.txt
+
+Pipe operator | :
+
+The | pipe operator is a command-line operator in  linux-based systems that connects the output of one command to the input of another command. It allows you to chain together multiple commands to create more complex command sequences.
+
+Ex:   ls -lrt | wc
+
+
+
+Grep Command:
+
+ Grep command is used to search for the pattern in the closed files
+
+Syntax:grep “<pattern>” <file name with path>
+
+Ex:grep “<new>” b5/b4/newdisplay.txt
+
+	How to search the pattern starting with some pattern?
+
+Syntax : grep “^ <pattern>” filename
+
+Ex: grep “^new” newdisplay.txt”
+
+$  It will display the content if the pattern matches in the end of the line.
+
+Ex : grep “. txt$” newdisplay.txt
+
+Options:
+•	grep –icase insensitive search
+
+Ex: grep -i “news” newdisplay.txt
+
+•	grep –nit will return the results along with line number, display only matched pattern
+
+Ex: grep -n “news” newdisplay.txt
+
+•	grep -o It will display only the content
+
+Ex: grep -o “news” newdisplay.txt
+
+•	grep –ion  would search for "pattern" in "filename" and output the matching lines along with their line numbers and the byte offsets of the matches within those lines, all in a case-insensitive manner. 
+
+Ex: grep -ion “news” newdisplay.txt
+
+Multiple Patterns: 
+It will the multiple pattern in closed file.
+
+Syntax: grep -e “<pattern> -e “<pattern>” filename
+
+Ex:  grep -e “new” -e “ data” newdisplay.txt
+
+Links:
+A link in the linux is a pointer to the file which will be indirectly accessed by the user.
+
+•	By using the links we can modify the content of the file as well.
+
+Types of Links: 
+
+1.	Hard Link
+
+2.	Soft Link
+
+1.	Hard Link:
+
+•	It will have the exact copy of the original file.
+•	Whenever we made some changes to the original file still we can see the changes in the linked/copy file.
+•	Whenever we rename/moved the file still we can see the changes in original file.
+•	Whenever we delete the original file,we can still access the linked file.
+•	If the main file/original file is not there, then the linked file is still available and it will act as normal file
+
+	How to add/create the hardlink to the file?
+
+Syntax: ln[main file name with path][link name]
+
+Ex:ln /home/Ubuntu/B5/dir4/dir4.1/testdata/test.txt   b5_test.txt
+
+2.	Soft Link: 
+
+•	A soft link is simila to the file shortcut as in the windows
+•	Whenever we made some changes to the origin file still we can see changes in the linked/copy file
+•	Whenever we rename/moved the file we cant see the changes which will happen in the original file.(The link will be break whenever we rename/moved the original file)
+
+Syntax: ln -s [main file name with path] [link name]
+
+Ex:ln -s /home/ubuntu/B5/dir4/dir4.1/testdata/test2
+
+b5_softlink/home/ubuntu/B5/dir4/dir4.1/testdata/test2
+
+Wget Command:
+
+It will allow us to download the content through the URL.
+
+Ex : wgethttps://dlcdn.apache.org/
+
+Top Command: 
+
+Top Command is used to show the running processes in the background.
+
+Syntax: top
+
+	How to see the top 20 processes?
+
+Syntax: top -n <number of process>
+
+Ex: top -20    or top | head -20
+
+	Exit the top Command after specific repetation?
+
+Syntax: top -n <number of repetation>
+
+top -n 5
+
+PS Command:
+The ps command will show the process status which is running in the background.
+
+•	We will get the complete details of the processes in the ps
+•	We will get to know the application is running or not
+
+Syntax: ps -aef
+
+Ex: ps -aef | grep “chrome”
+
+•	If we want to kill/stop the process we can kill/stop the process by using PID
+
+	How to kill the process in the linux?
+
+Syntax: kill -9 <PID>
+
+SED Command:
+sed command is used to search, replace delete & insert content to the file
+
+Syntax: sed<options><filename>
+
+•	In SED without opening the file,we can perform the search,replace and delete the content of the file.
+
+How to search and replace the pattern in the file?
+
+Syntax:  sed ‘s/ <searchpattern>/<replace pattern>/’< filename>
+
+Ex:  sed ‘s/Data/Linux/’ search.txt
+
+•	Save the changes 
+
+sed –i ‘s/<searchpattern>/<replace pattern>/’ filename
+
+-i used to save latest modifications
+
+	How to Replace string/replace pattern in all the occurrence?
+
+Syntax:  sed ‘s/pattern/replace pattern/g’ <file name>
+
+Ex: sed ‘s/data/linux/g’ search.txt
+
+  g it will search & replace globally
+
+	How to replace nth occurrence in the file?
+
+Syntax: sed ‘s/pattern/replace pattern/nth’ <filename>
+
+Ex:sed ‘s/data/linux/2’ search.txt
+
+	How to search and replace with multiple pattern?
+
+Syntax: sed ‘s/<searchpattern>/<replace pattern>/nth; s/<searchpattern>/<replace pattern>/nth; <filename>
+
+Ex:sed ‘s/data/linux/g;s/server/vms/g’ search.txt
+
+	How to replace pattern in specific line?
+
+Syntax: sed ‘<line number> s/pattern/replace pattern/nth;<filename>
+
+Ex:sed ‘5 s/data/linux/g’ search.txt
+
+	How to replace a pattern in specific  range (from starting line number to end line number)?
+
+Syntax: sed ‘<start line no>,<end line no> s/<spattern>/<replace pattern>/nth  <filename>
+
+Ex: sed ‘5,7 s/data/linux/g’ search.txt
+
+	Delete the line in the sed( without opening the file)?
+
+Syntax:sed ‘<line number>d’ filename
+
+sed ‘5d’ filename
+
+	How to delete  lines for range 12 to 15?
+
+sed ’12,15d’ filename
+
+	How to search & replace the case insensitive pattern?
+
+sed -i ‘s/data/linux/g’ search.txt
+
+
+Tar Command:  Tar stands for tape archieve.It is used to create,archieve and extract the archieve files.
+
+•	By using the tar we can compress the files,directories and creates the new compressed file.
+Syntax: tar [options] [archieve-filename] [files/dirs to be archieveeith path]
+
+Options:
+-c  Creates the archieve
+-xExtract the archieve
+-f Creates the archieve with given name
+-cDisplay information
+-zZip,tells /inform the tar command that need to create the file using the gzip
+gzipgunzip
+
+	How to archieve/tar/compress the files?
+
+Syntax: tar -zcvf configs.tar.gz dir4.1
+
+	How to extract the tar file?
+
+Syntax: tar[optins][tar filename]
+
+Ex: tar -xvf configs.tar.gz
+
+SCP Command: Secure Copy
+
+	How to copy the files from local machines to the remote server?
+
+Syntax: scp<source_file_with_path><user_name>@<remote server_publicIp address>
+<server_path>
+
+Ex: scp configs.tar.gz ubuntu@172.10.20.11 : /home/Ubuntu/docs/linux
+
+Pem file copy:
+
+Syntax: scp<pem file><source file path><user name>@<server_Ip address>: <server path>
+
+Ex: scpserver.pem  configs.tar.gz ubuntu@172.10.20.11 : /home/ubuntu/docs/linux
+
+	How to copy the files from remote server to local?
+
+Syntax:scp<user_name>@<server_public_ip_address>:<server_path><local_path>
+
+Ex:ubuntu@172.10.20.11:/home/ubuntu/docs/linux/testdata.txt /home/ubuntu/localfiles
+
+
+rsync : 
+
+rsync is a powerful command-line tool for copying and synchronizing files between local and remote systems in Linux. It uses a fast and efficient algorithm to only copy the differences between files, which makes it much faster than traditional file copy methods.
+
+Syntax: rsync<source file with path><user name>@<server public ip address>:<server path>
+
+•	If the connection is aborted while copying rsync will establish the copy,it will start from where it stops.
+
+Configuration and Management (Administrative Commands):
+
+	adduser:  this command will create user,creates password ,creates gropu and will add association with the group.
+
+Syntax: sudoadduser username
+
+Ex: sudoadduser john
+
+	passwd:  changesthe pwd for current logged in user
+
+Syntax: passwd username
+
+ Changes the password for the username provided.
+
+cat /etc/passwd gives the details of users in the system
+
+deluser: deletes the user from the system
+
+Syntax: sudodeluser username
+
+Ex: sudodeluser john
+
+addgroup:  creates a group
+
+Syntax: sudoaddgroupgroupname
+
+cat /etc/group gives information related to groups
+
+delgroup : deletes the group
+Syntax: delgroupgroupname
+
+	usermod:The usermod command in Linux is used to modify user account settings. It is typically used to change attributes of a user account such as the user's home directory, default shell, UID or GID, expiration date, and more.
+
+sudousermod -p username
+
+command in Linux is used to set the password for a user account.
+
+sudousermod -a -G abc xyz
+
+here,xyz user is added to the group abc
+
+	chmod:chmod is a command in Linux is used to change the permissions of files and directories.
+
+Syntax: chmod permission filename
+
+Here are some examples of how to use the chmod command:
+
+•	Change the permission of a file to read, write, and execute for the owner, and read and execute for everyone else:
+
+chmod 755 myfile.txt
+
+•	Change the permission of a directory and its contents recursively to read, write, and execute for the owner, and read and execute for everyone else:
+
+chmod -R 755 mydirectory/
+
+	Add write permission for the group that a file belongs to:
+
+chmodg+w myfile.txt
+
+	Remove execute permission for everyone else for a file:
+
+chmod o-x myfile.txt
+
+	chgrp:chgrp is a command in Linux and other Unix-like operating systems that is used to change the group ownership of a file or directory.
+
+Syntax:chgrp [options] group file
+
+Here are some examples of how to use the chgrp command:
+
+Change the group ownership of a file to a new group:
+
+chgrpmygroup myfile.txt
+
+Change the group ownership of a directory and its contents recursively:
+
+chgrp -R mygroupmydirectory/
+
+chown:chown is a command in Linux  is used to change the ownership of a file or directory.
+
+Here's the basic syntax for the chown command:
+
+chown [options] owner[:group] file
+
+Here are some examples of how to use the chown command:
+
+•	Change the ownership of a file to a new user:
+
+chownmyuser myfile.txt
+
+•	Change the ownership of a file to a new user and group:
+
+chownmyuser:mygroup myfile.txt
+
+•	Change the ownership of a directory and its contents recursively:
+
+chown -R myuser:mygroupmydirectory/
+
+
+Find Command:
+ Find command is used to search for the files or dirs in the specific or in the entire linux system.
+
+Syntax: find<dirname> -name<filename>
+
+•	find . -name search.txt
+search the file in the current directory.
+
+•	Search for the file with pattern(.sh,.txt,.doc,.xlsx,.log)
+Find <dirname> -name ‘*.txt’
+
+•	Search the files and delete that if the file exists.
+Syntax: find<dirname> -name <filename> -exec rm -i{}\;
+
+•	 Search for empty file?
+Syntax: find <dirname> -empty
+
+•	find . -empty
+It shows all the empty files in the current directory.
+
+•	Command to delete the empty file
+Syntax: find <dir name> -empty -exec rm -i{}\;
+
+•	Search for file based on the file permission?
+Syntax: find<dirname> -perm <file permission>
+
+Ex: find b5 -perm 664
+
+•	Search for the file based on the user.
+Syntax: find <dirname> -user <username>
+
+•	Find the files which is modified some days back.
+Syntax: find <dirname> -m time <number of days>
+
+Ex: find b5 -m time -2
+
+•	Find the files which is accessed some days back.
+Syntax: find <dirname> -a time <number of days>
+
+ Ex: find b5 -a time -2
+
+•	Find the files which is accessed 20 mins back.
+Syntax: find <dirname> -a min -20
+
+•	Find the files which is modified 20 mins back.
+Syntax: find <dirname> -m min -20
+
+•	Find the files which is created 20 mins back.
+Syntax: find <dirname> -c min -20
+
+•	Find the file based on the size
+Syntax: find<dirname> -size <size in mb>
+
+   AWK Command:
+ awk is an scripting language it is used to generating the reports or manipulating the data.   By using awk command we are going to fetch the data based on columns. Awk will perform action line by line.
+
+Syntax: awk options ‘selection criteria (action)’ filename
+
+	How to display all collumns in awk command?
+
+Syntax: awk ‘{print}’ <file name>
+
+Ex:awk ‘{print}’ <search.txt>
+
+	How to display all columns with selection criteria
+
+Syntax:awk ‘/selection criteria/ {action}’ <file name>
+
+Ex: awk ‘/manager/ {print}’ search.txt
+
+	How to fetch particular column with selection criteria .
+
+Syntax: awk ‘/selection criteria/ {action column no}’ <filename>
+
+Ex:awk ‘/manager/ {print $1,$4}’ search.txt
+
+$1- 1st column, $0-entire row, $2-2nd column
+
+	Display 1st & 3rd column
+
+awk ‘{print $1 $3}’ filename
+
+	How to fetch last column of file
+
+awk ‘{print $NF}’ filename
+
+	How to fetch 1st & last column
+
+awk ‘{print $1, $NF}’ filename
+
+	How to display line no to entire data
+
+awk ‘{print NR, $0}’ filename
+
+	Built in variables in the awk 
+
+NR-record no/line no,
+
+$0-entire row/line
+
+	FS: Field Seperator
+
+By default FS is space “ “
+
+Ex: ; , * , -
+
+	How to display the line number for entire data?
+
+awk  ‘{print NR,$0}’ data.txt
+
+	How to fetch the last column of the file?
+
+awk ‘{print $NF} data.txt
+
+	How  to fetch the first and last column ?  
+
+awk ‘{print $1,$NF}’ data.txt
+
+	How to fetch  data for given rows range?
+
+awk ‘NR==2,NR==10 {print $1,$NF}’ <filename>
+
+	How to print empty line?
+
+awk ‘NF==0 {print NR,$0}’ filename
+
+	How to print non empty line?
+
+awk ‘NF!=0 {print NR,$0}’ filename
+
+
+Network Commands
+
+	Ping:  ping is used to check the system is up and running or not.
+ping is used to check the connection between the source machines to destination .
+
+Syntax: ping 10.2.2.100 
+
+	Telnet : Telnet command is used to create the remote connection with a system over the TCP/IP network.
+
+Syntax: telnet 10.2.2.101:8080
+
+	netstat: The netstat command is used to display network connections, routing tables, and network interface statistics.
+
+Syntax: netstat
+
+	ifconfig: The ifconfig command is used to display network interface configuration information, such as IP addresses, subnet masks, and hardware addresses.
+
+Syntax: ifconfig
+
+	nslookup: The nslookup command is another tool used for DNS lookups.
+
+Syntax: nslookup google.com

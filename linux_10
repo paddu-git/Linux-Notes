@@ -1,0 +1,136 @@
+Date:24/12/2024
+............................
+task:
+1)Difference between wget and curl
+2)Difference between HTTP, HTTPS, FTP
+..............................................
+
+gzip and gunzip command
+
+gzip and gunzip command is used to compress and decompress the files respectively
+
+How to compress the file?
+
+gzip <file-name>
+
+how to decompress thee file
+
+gunzip <file-name>
+
+...........................
+Tar: tape-archive
+
+tar command is used for creating/manipulating/archiving files in a tar format
+
+Archiving: combining multiple files and dir's together
+
+tar:tar command is used for archiving multiple files and dir's together without any compression.
+    This makes it easierto manage a transfer multiple files as a single unit.
+    
+Syntax: tar <options> <  <files/dir to be archived>
+
+options:
+
+-c = create an archive
+-x = extracting the archive
+-f = to create archive with the name given
+-v= display the information on the terminal (verbose)
+-z = inform the tar command that files/dir's need to be archived using gzip
+
+How to tar?
+
+tar -zcvf rk123.tar.gz file1.txt file2.txt
+
+How to untar?
+
+tar -xvf rk123.tar.gz
+
+.................................................
+
+Memory utilization commands
+
+free/free -h
+who
+whoami
+
+du:disk ytilization (disc usage)
+
+it will display the disc space usage of files and dir's
+
+synatx: du <dir-name> 
+          or
+        du -h <dir-nmae>
+        
+It will display the content in terms of kb
+
+....................
+
+DF: disc free
+
+it will display the availabe disc space
+
+syntax: df or df -h
+
+............................
+
+Top command:
+
+top command is used to monitor the system resources and processes in a real time.
+It provides the dynamic information (real time info) of running processes in a linux system
+i.e cpu usage,memory usage etc
+
+syntax: top
+q for quit
+
+top -n 4
+n= no of iterations
+
+top | head -15
+
+Above command will display the first 15 lines of running processes
+
+.....................
+
+ps command:
+
+Ps command is used to list the currently running processes in a linux system
+It provides the running processes at a moment you run the command
+
+Syntax: ps -aef
+
+-a = display all the processes including the users
+-e = Display the detailed information of all the processes
+-f=  Detailed information
+
+.........................
+
+How to kill the process
+
+kill <process-id>
+
+How to kill the process forefully
+
+kill -9 <process-id>
+
+.....................
+
+curl and wget command
+
+The wget and curl commands are both powerful tools for downloading files from the internet 
+
+
+Wget, on other hand, primarily supports HTTP and FTP protocols.
+syntax:wget <URL>
+ex: if i want to download the python
+then ..wget <python_download_URL>
+
+curl:
+curl is a command-line tool that can transfer data to and from a server. It can download files, upload files, 
+and interact with web APIs, all from the terminal. 
+
+Curl and wget are used to retrieve data from internet. They use different protocols to perform this task, 
+curl supports a variety of protocols, including HTTP, HTTPS, FTP and more. 
+synatx: curl <URL>
+.................................
+
+

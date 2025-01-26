@@ -1,0 +1,99 @@
+Date:12/12/2024
+.......................................
+https://devopsjune2022-my.sharepoint.com/:v:/g/personal/adikarthik_devopsjune2022_onmicrosoft_com/ESPyC7Wjl1lGhiTrf1Hm5MMBQdVIC_-RXMMjeGxlROI0Sw?e=TyjrVX
+.........................................................
+Task:
+1. Explore on  mv command for dir's 
+2. what is the use of ls -a command and whoami command
+............................................
+
+tree command:
+
+tree command is used to display the file structure in a tree like format
+ (dir and its contents in a tree like format)
+
+Note:if any command is not available (external command)
+     then you can use sudo apt install <command_name>
+         Ex: sudo apt install tree.
+
+.........................................
+
+ls:
+
+ls command is used to display the list of liles and dir's in the current working dir
+
+ls -l : it is used to display the files and dir's in a long format (detailed information)
+             ( permission, size modification time etc) 
+
+ls -lt: It will display the content in long format along with modification time (latest to oldest)
+
+ls -lrt: It will display the content in long format along with modification time (oldest to latest)
+
+.................................
+
+date:Data command is used to display the system current date and time.
+
+synatx: date
+.................................................
+
+who:
+
+this command will display the current user along with last sytem boot date and time.
+
+synatx: who
+
+...................................
+
+uname: (user name):
+
+uname is used  to display the name of current operating system.
+
+synatx: uname
+
+..........................
+
+pwd: it will display the path of present working dir
+
+........................
+
+. = pwd
+
+present working directory
+.....................................................
+
+mv(move) command
+
+mv command is used to move or rename files and dir's
+
+syntax: mv <source> <destination>
+
+1) How to rename a file:
+
+mv <file1> <file2>
+ex: abc.txt rk.txt
+Above command will rename the file from abc.txt to rk.txt
+
+2)how to move a file to diff location?
+
+mv <file_name> <destination path>
+
+mv <file_name> .
+
+3)How to move a file from one location to another location
+
+mv <source path> <destination path>
+
+mv /home/rk/abc.txt  /home/rk/dir1/
+
+Here the file abc.txt which is in the path /home/rk will be moved to /home/rk/dir1 path
+
+mv /home/rk/abc.txt  .
+
+Here the file abc.txt will be moved from /home/rk path to a present working directory.
+
+Note:Instead of using . you can also use pwd path
+
+.............................................
+
+
+
